@@ -12,6 +12,18 @@ if __name__ == '__main__':
     window.withdraw()
     
     # Ask the user for the radius in pixels and store it in a variable
+    radius = simpledialog.askinteger("circle calculator", "put the radius in pixels")
+    my_turtle = turtle.Turtle
+    turtle.speed(10)
+    turtle.circle(radius)
+    turtle.penup()
+    turtle.goto(100, 100)
+    circle = math.pi * radius * radius
+    print(circle)
+    turtle.write(arg="area = " + str(circle), move=True, align='left', font=('Arial' ,8, 'normal'))
+    turtle.hideturtle()
+    turtle.done()
+
     # simpledialog.askinteger()
     
     # Make a new turtle
